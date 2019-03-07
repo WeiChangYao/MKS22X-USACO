@@ -25,6 +25,10 @@ public class USACO{
     }
     return lake[0][0];
   }
+  public static void stomp(int row,int col,int dig, int[][] layk){
+    int max = 0
+    
+  }
    public static void main(String[] args){
      try{
      System.out.println(bronze("makelake.in"));
