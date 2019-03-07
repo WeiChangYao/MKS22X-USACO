@@ -6,19 +6,31 @@ public class USACO{
   private int E;
   private int N;
   private char[][] lake;*/
-  //VOID FOR NOW
-  public static void bronze(String filename) throws FileNotFoundException{
+  public static int bronze(String filename) throws FileNotFoundException{
     File f = new File(filename);
     Scanner sc =  new Scanner(f);
     int R =0;
     int C =0;
-    R = sc.nextInt();
-    C = sc.nextInt();
+    int E = 0;
+    int N = 0;
+    R = Integer.parseInt(sc.next());
+    C = Integer.parseInt(sc.next());
+    E = Integer.parseInt(sc.next());
+    N = Integer.parseInt(sc.next());
     int[][] lake = new int[R][C];
     for(int i = 0; i < R; i++){
       for(int j = 0; j < C; j++){
-        lake[i][j] = sc.nextInt();
+        lake[i][j] = Integer.parseInt(sc.next());
       }
     }
+    return lake[0][0];
   }
+   public static void main(String[] args){
+     try{
+     System.out.println(bronze("makelake.in"));
+   }catch(FileNotFoundException e){
+         System.out.println("File not found: ");
+   }
+
+   }
 }
