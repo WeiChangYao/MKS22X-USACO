@@ -1,11 +1,6 @@
 import java.util.*;
 import java.io.*;
 public class USACO{
-  /*private int R;
-  private int C;
-  private int E;
-  private int N;
-  private char[][] lake;*/
   public static int bronze(String filename) throws FileNotFoundException{
     File f = new File(filename);
     Scanner sc =  new Scanner(f);
@@ -32,8 +27,8 @@ public class USACO{
     int sum = 0;
     for (int i = 0; i<R; i++){
       for (int j = 0; j<C; j++){
-        if(N<lake[i][j]){     
-          sum+= N-lake[i][j];  //subtract N with lake number and add
+        if(E>lake[i][j]){     
+          sum = sum + E-lake[i][j];  //subtract N with lake number and add
         }
       }
     }
@@ -45,27 +40,27 @@ public class USACO{
     int max = 0;
     //finds largest value in lake stomping range
     for (int i = row-1; i<row+2; i++){
-      for (int j = col; j<col+2; j++){
+      for (int j = col-1; j<col+2; j++){
         if (layk[i][j] > max){      
           max = layk[i][j];
         }
       }
     }
     max-= dig; //subtracts from largest number in range
-    for (int i = row-1; i<row+2; row++){
-      for (int j = col; j<col+2; j++){
+    for (int i = row-1; i<row+2; i++){
+      for (int j = col-1; j<col+2; j++){
         if (layk[i][j]> max){
-          layk[i][j]-= dig;  //subtract numbers from dig only if they are greater than max
+          layk[i][j] = max;  //it becomes the new max
         }
       }
     }
   }
-   public static void main(String[] args){
+ /*  public static void main(String[] args){
      try{
      System.out.println(bronze("makelake.in"));
    }catch(FileNotFoundException e){
          System.out.println("File not found: ");
    }
 
-   }
+   }*/
 }
