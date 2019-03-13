@@ -67,16 +67,29 @@ public class USACO{
         farm[i][j] = (sc.next().charAt(0));
       }
     }
-    return 1;
+    int sy =Integer.parseInt(sc.next())-1;
+    int sx =Integer.parseInt(sc.next())-1;
+    int ey =Integer.parseInt(sc.next())-1;
+    int ex =Integer.parseInt(sc.next())-1;
+    return silverH(sy,sx,farm,T,ey,ex); 
+    //return 1;
   }
   public boolean placable(int y, int x, char[][] data){
     return (y>0 && x>0 && y<data.length && x>data[y].length);
   }
-  public static int silverH(int y, int x, char[][] data, int t){
-    if (t == 0){
+  public static int silverH(int y, int x, char[][] data, int t, int targetY, targetX){
+    if (t == 0 && y==targetY && x==targetX){
       return 1;
     }
-    if (y+1 > 0;)
+    if (t == 0){
+      return 0;
+    }
+    else{
+      return silverH(y+1,x,data,t-1,targetY,targetX)+
+        silverH(y-1,x,data,t-1,targetY,targetX)+
+        silverH(y,x+1,data,t-1,targetY,targetX)+
+        silverH(y,x-1,data,t-1,targetY,targetX);
+    }
   }
  /*  public static void main(String[] args){
      try{
