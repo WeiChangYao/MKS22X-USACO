@@ -26,8 +26,23 @@ public class USACO{
     return lake[0][0];
   }
   public static void stomp(int row,int col,int dig, int[][] layk){
-    int max = 0
-    
+    int max = 0;
+    //finds largest value in lake stomping range
+    for (int i = row-1; i<row+2; row++){
+      for (int j = col; j<col+2; j++){
+        if (layk[i][j] > max){      
+          max = layk[i][j];
+        }
+      }
+    }
+    max-= dig; //subtracts from largest number in range
+    for (int i = row-1; i<row+2; row++){
+      for (int j = col; j<col+2; j++){
+        if (layk[i][j]> max){
+          layk[i][j]-= dig;  //subtract numbers from dig only if they are greater than max
+        }
+      }
+    }
   }
    public static void main(String[] args){
      try{
