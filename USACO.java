@@ -17,18 +17,32 @@ public class USACO{
     C = Integer.parseInt(sc.next());
     E = Integer.parseInt(sc.next());
     N = Integer.parseInt(sc.next());
-    int[][] lake = new int[R][C];
+    int[][] lake = new int[R][C]; //makes lake
     for(int i = 0; i < R; i++){
       for(int j = 0; j < C; j++){
         lake[i][j] = Integer.parseInt(sc.next());
       }
     }
-    return lake[0][0];
+    while(sc.hasNext()){  //keep running stomp
+      int r = Integer.parseInt(sc.next());
+      int c = Integer.parseInt(sc.next());
+      int d = Integer.parseInt(sc.next());
+      stomp(r,c,d,lake);
+    }
+    int sum = 0;
+    for (int i = 0; i<R; i++){
+      for (int j = 0; j<C; j++){
+        if(N<lake[i][j])
+        }
+      }
+    
+    
   }
+  
   public static void stomp(int row,int col,int dig, int[][] layk){
     int max = 0;
     //finds largest value in lake stomping range
-    for (int i = row-1; i<row+2; row++){
+    for (int i = row-1; i<row+2; i++){
       for (int j = col; j<col+2; j++){
         if (layk[i][j] > max){      
           max = layk[i][j];
