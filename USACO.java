@@ -77,7 +77,7 @@ public class USACO{
   public boolean placable(int y, int x, char[][] data){
     return (y>0 && x>0 && y<data.length && x>data[y].length);
   }
-  public static int silverH(int y, int x, char[][] data, int t, int targetY, targetX){
+  public static int silverH(int y, int x, char[][] data, int t, int targetY, int targetX){
     if (t == 0 && y==targetY && x==targetX){
       return 1;
     }
