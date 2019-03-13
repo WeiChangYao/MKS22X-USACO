@@ -55,6 +55,19 @@ public class USACO{
       }
     }
   }
+  public static int silver(String filename){
+    File f = new File(filename);
+    Scanner sc =  new Scanner(f);
+    int N =Integer.parseInt(sc.next());
+    int M =Integer.parseInt(sc.next());
+    int T =Integer.parseInt(sc.next());
+    char[][] farm = new char[N][M];
+    for(int i = 0; i < N; i++){
+      for(int j = 0; j < M; j++){
+        lake[i][j] = (sc.next());
+      }
+    }
+  }
  /*  public static void main(String[] args){
      try{
      System.out.println(bronze("makelake.in"));
