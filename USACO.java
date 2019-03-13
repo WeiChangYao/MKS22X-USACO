@@ -32,10 +32,12 @@ public class USACO{
     int sum = 0;
     for (int i = 0; i<R; i++){
       for (int j = 0; j<C; j++){
-        if(N<lake[i][j])
+        if(N<lake[i][j]){     
+          sum+= N-lake[i][j];  //subtract N with lake number and add
         }
       }
-    
+    }
+    return sum * 72 * 72;
     
   }
   
