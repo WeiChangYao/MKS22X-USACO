@@ -55,18 +55,19 @@ public class USACO{
       }
     }
   }
-  public static int silver(String filename){
+  public static int silver(String filename) throws FileNotFoundException{
     File f = new File(filename);
     Scanner sc =  new Scanner(f);
     int N =Integer.parseInt(sc.next());
     int M =Integer.parseInt(sc.next());
     int T =Integer.parseInt(sc.next());
     char[][] farm = new char[N][M];
-    for(int i = 0; i < N; i++){
-      for(int j = 0; j < M; j++){
-        lake[i][j] = (sc.next());
+    for(int i = 0; i < N+1; i++){
+      for(int j = 0; j < M+1; j++){
+        farm[i][j] = (sc.next().charAt(0));
       }
     }
+return 1;    
   }
  /*  public static void main(String[] args){
      try{
