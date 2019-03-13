@@ -62,8 +62,8 @@ public class USACO{
     int M =Integer.parseInt(sc.next());
     int T =Integer.parseInt(sc.next());
     char[][] farm = new char[N][M];
-    for(int i = 0; i < N+1; i++){
-      for(int j = 0; j < M+1; j++){
+    for(int i = 0; i < N; i++){
+      for(int j = 0; j < M; j++){
         farm[i][j] = (sc.next().charAt(0));
       }
     }
@@ -99,4 +99,12 @@ public class USACO{
    }
 
    }*/
+   public static void main(String[] args){
+     try{
+     System.out.println(silver("ctravel.in"));
+   }catch(FileNotFoundException e){
+         System.out.println("File not found: ");
+   }
+
+   }
 }
