@@ -67,7 +67,16 @@ public class USACO{
         farm[i][j] = (sc.next().charAt(0));
       }
     }
-return 1;    
+    return 1;
+  }
+  public boolean placable(int y, int x, char[][] data){
+    return (y>0 && x>0 && y<data.length && x>data[y].length);
+  }
+  public static int silverH(int y, int x, char[][] data, int t){
+    if (t == 0){
+      return 1;
+    }
+    if (y+1 > 0;)
   }
  /*  public static void main(String[] args){
      try{
